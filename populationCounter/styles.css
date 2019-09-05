@@ -1,0 +1,50 @@
+body {
+  background: #161616;
+  color: #bdbdbd;
+  font-weight: 300;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Helvetica neue, roboto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputArea{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.listElements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1em ;
+}
+
+.red {
+  color: #e76d6d;
+}
+
+img {
+  width: 56px;
+  height: 48px;
+}
+
+h1 {
+  font-weight: 200;
+  font-style: 26px;
+  margin: 10px;
+}
