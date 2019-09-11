@@ -1,0 +1,25 @@
+
+
+.number-button {
+  background-color: #5B0F4D;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  min-width: 32px;
+  border: unset;
+  outline: unset;
+  border-radius: 10px;
+}
+
+.number-button:hover {
+  background-color: #984C8A;
+}
+
+
+.number-button:focus {
+  background-color: #B77AAB;
+}
+
+.number-button:active {
+  background-color: #3D0031;
+}
