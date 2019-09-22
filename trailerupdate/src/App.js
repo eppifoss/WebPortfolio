@@ -1,15 +1,16 @@
-
-
 import React from 'react';
-import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import './App.css';
+
 import Menu from './components/Menu';
-import {Main} from './components/Main';
+import { Main } from './components/Main';
+
+import {CssReset} from '@dhis2/ui-core';
 
 function App() {
-
   return (
     <Router>
+      <CssReset />
       <Route render={ componentProps => <Menu/> }  />
       <Main />
     </Router>
