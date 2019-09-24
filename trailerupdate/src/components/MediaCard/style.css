@@ -1,0 +1,26 @@
+
+.movie-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column-reverse wrap;
+  width: 430px;
+  height: 300px;
+  padding: 0px;
+  margin: 2em 1em;
+  transition: 400ms;
+}
+
+
+.movie-card:hover, .movie-card:focus, .movie-card:active {
+  width: 460px;
+  height: 350px;
+  margin: 0em .5em;
+}
+
+.movie-info {
+  text-decoration: none ;
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+}

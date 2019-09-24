@@ -1,0 +1,10 @@
+.menu-items {
+  background-color: #438945;
+  border-radius: 5px;
+}
+
+
+.menu-item:hover {
+  background-color: #98cd9a !important;
+  border-radius: 5px;
+}

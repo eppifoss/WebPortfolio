@@ -1,0 +1,27 @@
+
+
+.search-bar{
+  display: flex;
+  display: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0.2em;
+}
+
+.search-box , input {
+  color: white !important;
+  width: 80%;
+  margin: 0 0.4em;
+}
+
+.search-button:active {
+    background-color: #438945;
+}
+
+.search-button:hover {
+    background-color: #438945;
+}
+
+.search-button:focus {
+    background-color: #438945;
+}

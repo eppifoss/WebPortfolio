@@ -1,22 +1,43 @@
 import React, {useState} from 'react';
+import { InputField, Button} from '@dhis2/ui-core';
+import './style.css';
+import * as api from '../api';
 
-import {InputField} from '@dhis2/ui-core';
+export const SearchBar = ({setFilters}) => {
 
-export const SearchBar = () => {
+  const [localText, setLocalText] = useState('');
 
-  const [text, setText] = useState('');
+  const handleChange = (searchtext) => {
+    setLocalText(searchtext);
+    if(!searchtext) return;
+    api.searchMovie(searchtext).then(
+      mediaList => setFilters(mediaList.results)
+    );
+  }
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    api.searchMovie(localText).then(
+      mediaList => setFilters(mediaList.results)
+    );
+    setLocalText('')
+  }
 
   return (
-    <>
+    <div className="search-bar">
       <InputField
-
+        className="search-box"
         label="Search Trailer"
-        value={text}
+        value={localText}
         name="search-box"
-        onChange={ _ref => setText(_ref.target.value)}
-        type='text'
+        onChange={ e => handleChange(e.target.value)}
+        type="text"
       />
-      <h4>{text}</h4>
-    </>
+      <Button
+        className="search-button"
+        onClick={ e => handleClick(e) }>
+       Search
+      </Button>
+    </div>
   );
 }
